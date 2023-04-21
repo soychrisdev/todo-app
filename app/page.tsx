@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardTitle } from "@/components/web-ui/card";
+import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 
 
 
