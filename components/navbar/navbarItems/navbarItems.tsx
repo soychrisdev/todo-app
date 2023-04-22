@@ -1,62 +1,28 @@
-export default function NavbarItems() {
+import { ItemInterface } from "@/utils/navbarUtils/menuItems"
+interface Props {
+    menuItems: ItemInterface[]
+}
+export default function NavbarItems({ menuItems }: Props) {
+    console.log(menuItems)
+
     const content = (
 
         <div className="hidden md:block">
             <nav aria-label="Site Nav">
                 <ul className="flex items-center gap-6 text-sm">
-                    <li>
-                        <a
-                            className="text-gray-500 transition hover:text-gray-500/75"
-                            href="/"
-                        >
-                            About
-                        </a>
-                    </li>
+                    {menuItems?.map(({ href, name }) => (
+                        <li key={href}>
+                            <a
+                                className="text-gray-500 transition hover:text-gray-500/75"
+                                href={href}
+                            >
+                                {name}
+                            </a>
+                        </li>
+                    ))}
 
-                    <li>
-                        <a
-                            className="text-gray-500 transition hover:text-gray-500/75"
-                            href="/"
-                        >
-                            Careers
-                        </a>
-                    </li>
 
-                    <li>
-                        <a
-                            className="text-gray-500 transition hover:text-gray-500/75"
-                            href="/"
-                        >
-                            History
-                        </a>
-                    </li>
 
-                    <li>
-                        <a
-                            className="text-gray-500 transition hover:text-gray-500/75"
-                            href="/"
-                        >
-                            Services
-                        </a>
-                    </li>
-
-                    <li>
-                        <a
-                            className="text-gray-500 transition hover:text-gray-500/75"
-                            href="/"
-                        >
-                            Projects
-                        </a>
-                    </li>
-
-                    <li>
-                        <a
-                            className="text-gray-500 transition hover:text-gray-500/75"
-                            href="/"
-                        >
-                            Blog
-                        </a>
-                    </li>
                 </ul>
             </nav>
         </div>
