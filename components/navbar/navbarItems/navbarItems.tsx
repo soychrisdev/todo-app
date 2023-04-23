@@ -3,8 +3,6 @@ interface Props {
     menuItems: ItemInterface[]
 }
 export default function NavbarItems({ menuItems }: Props) {
-    console.log(menuItems)
-
     const content = (
 
         <div className="hidden md:block">
