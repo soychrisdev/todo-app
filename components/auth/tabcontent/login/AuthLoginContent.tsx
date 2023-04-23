@@ -14,11 +14,11 @@ export default function AuthLoginContent() {
                 <CardDescription>
                     Enter your email and password below, or just use it!
                     <Separator />
-                    <div className="flex justify-center p-4">
-                        <Button disabled >
+                    <div className="flex justify-center p-4 ">
+                        <Button disabled className="mr-2">
                             <ChromeIcon className="mr-2 h-4 w-4" /> Login with Google
                         </Button>
-                        <Button>
+                        <Button className="mr-2">
                             <GithubIcon className="mr-2 h-4 w-4" /> Login with Github
                         </Button>
                         <Button disabled>
