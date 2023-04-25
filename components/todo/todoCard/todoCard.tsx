@@ -45,11 +45,12 @@ export async function TodoCard() {
                         <CardHeader>
                             <CardTitle className="flex justify-between">
                                 {title.slice(0, 8)}...
-                                <Badge className={badgeVariants(completed ? { variant: 'default' } : { variant: 'destructive' })}>{completed ? 'done' : 'pending..'}</Badge>
+                                <Badge className={badgeVariants(completed ? { variant: 'default' } : { variant: 'destructive' })}>{completed ? 'done' : 'pending'}</Badge>
                             </CardTitle>
                             <CardDescription>{title}</CardDescription>
                         </CardHeader>
                         <CardContent>
+
 
                         </CardContent>
                         <CardFooter className="flex justify-between">

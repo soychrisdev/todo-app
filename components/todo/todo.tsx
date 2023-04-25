@@ -27,7 +27,7 @@ export default function Todo() {
             </div>
         </div>
 
-        <div className='grid grid-cols-2 p-4'>
+        <div className='grid grid-cols-2 mb-40 bg-yellow-100'>
             <Suspense fallback={'loading...'}>
                 {/* @ts-expect-error Server Component */}
                 <TodoCard />

@@ -20,8 +20,8 @@ import {
 
 
 interface FrameworkInterface {
-    value?: string
-    label?: string
+    value: string
+    label: string
 }
 
 
@@ -62,7 +62,7 @@ export function TodoType() {
                     className="w-[200px] justify-between"
                 >
                     {value
-                        ? frameworks.find((framework) => framework.value === value)?.label
+                        ? frameworks.find((framework) => framework?.value === value)?.label
                         : "Select note's space..."}
                     <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                 </Button>
@@ -83,7 +83,7 @@ export function TodoType() {
                                 <Check
                                     className={cn(
                                         "mr-2 h-4 w-4",
-                                        value === framework.value ? "opacity-100" : "opacity-0"
+                                        value === framework?.value ? "opacity-100" : "opacity-0"
                                     )}
                                 />
                                 {framework.label}
