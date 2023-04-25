@@ -21,7 +21,7 @@ export function TodoCreateDialog() {
                 <DialogHeader>
                     <DialogTitle></DialogTitle>
                     <DialogDescription>
-                        Create dialog. Click save when you're done.
+                        Create dialog. Click save when youre done.
                     </DialogDescription>
                 </DialogHeader>
                 <div className="grid gap-4 py-4">
