@@ -1,7 +1,3 @@
-import { Button } from "../ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card"
-import { Input } from "../ui/input"
-import { Label } from "../ui/label"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs"
 import AuthTabContent from "./tabcontent/AuthTabContent"
 import AuthTabList from "./tablist/AuthTabList"

@@ -16,8 +16,8 @@ export default function NavbarItemsMobile({ menuItems }: Props) {
                         <NavigationMenuTrigger><MenuIcon className="h-5 w-5" /></NavigationMenuTrigger>
                         <NavigationMenuContent>
                             <ul className="grid p-2">
-                                {menuItems.map(({ href, name }) => (
-                                    <Link key={name} href={href} className="mb-2 mt-2 bg-slate-50 hover:underline hover:bg-slate-100 rounded">{name}</Link>
+                                {menuItems.map(({ href, name, id }) => (
+                                    <Link key={id} href={href} className="mb-2 mt-2 bg-slate-50 hover:underline hover:bg-slate-100 rounded">{name}</Link>
                                 ))}
                             </ul>
                         </NavigationMenuContent>

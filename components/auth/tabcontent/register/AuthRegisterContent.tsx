@@ -9,21 +9,21 @@ export default function AuthRegisterContent() {
             <CardHeader>
                 <CardTitle>Register card</CardTitle>
                 <CardDescription>
-                    Make changes to your account here. Click save when you are done.
+                    Register your account. Click done when you are done.
                 </CardDescription>
             </CardHeader>
             <CardContent className="space-y-2">
                 <div className="space-y-1">
-                    <Label htmlFor="name">Name</Label>
-                    <Input id="name" defaultValue="Pedro Duarte" />
+                    <Label htmlFor="email">Email</Label>
+                    <Input id="email" type="email" />
                 </div>
                 <div className="space-y-1">
-                    <Label htmlFor="username">Username</Label>
-                    <Input id="username" defaultValue="@peduarte" />
+                    <Label htmlFor="password">Password</Label>
+                    <Input id="password" type="password" />
                 </div>
             </CardContent>
             <CardFooter>
-                <Button>Save changes</Button>
+                <Button>Done</Button>
             </CardFooter>
         </Card>
     )

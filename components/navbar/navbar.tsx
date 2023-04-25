@@ -14,7 +14,7 @@ import NavbarUser from "./navbarUser/navbarUser"
 export default function Navbar() {
 
 
-    const userLogged = false;
+    const userLogged = true;
 
     const handleClick = () => {
         // setCounter(counter++)

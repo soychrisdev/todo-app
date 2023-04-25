@@ -1,10 +1,9 @@
 
 
-
 export default function Home() {
   return (
     <>
-      <h1>hola</h1>
+      <h1>ROOT HOME PAGE</h1>
     </>
   )
 }
