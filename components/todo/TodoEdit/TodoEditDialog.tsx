@@ -21,7 +21,7 @@ export function TodoEditDialog() {
                 <DialogHeader>
                     <DialogTitle></DialogTitle>
                     <DialogDescription>
-                        Edit dialog. Click save when you're done.
+                        Edit dialog. Click save when youre done.
                     </DialogDescription>
                 </DialogHeader>
                 <div className="grid gap-4 py-4">
