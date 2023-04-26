@@ -7,6 +7,7 @@ import { TodoType } from './todoType/todoType'
 import { TodoCard } from './todoCard/todoCard'
 import { Suspense } from 'react'
 import { TodoCreateDialog } from './TodoCreate/TodoCreateDialog'
+import TooltipComponent from '../tooltip/TooltipComponent'
 
 
 export default function Todo() {
@@ -27,16 +28,9 @@ export default function Todo() {
             </div>
         </div>
 
-        <div className='grid grid-cols-2 mb-40 bg-yellow-100'>
-            <Suspense fallback={'loading...'}>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-40'>
                 {/* @ts-expect-error Server Component */}
                 <TodoCard />
-            </Suspense>
-
-
-
-
-
         </div>
     </>)
 };

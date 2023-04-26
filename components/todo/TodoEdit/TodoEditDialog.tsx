@@ -1,3 +1,4 @@
+import TooltipComponent from "@/components/tooltip/TooltipComponent"
 import { Button } from "@/components/ui/button"
 import {
     Dialog,
@@ -15,7 +16,9 @@ export function TodoEditDialog() {
     return (
         <Dialog>
             <DialogTrigger asChild>
+            <TooltipComponent text="Edit Todo">
                 <Button variant="outline"><EditIcon /></Button>
+            </TooltipComponent>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px]">
                 <DialogHeader>
