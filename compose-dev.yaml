@@ -1,15 +1,16 @@
-version: '3.1'
+version: '3.8'
 services:
-  app:
-    entrypoint:
-    - sleep
-    - infinity
-    image: docker/dev-environments-javascript:stable-1
-    init: true
+  web:
+    build:
+      context: ./
+      target: runner
     volumes:
-    - type: bind
-      source: /var/run/docker.sock
-      target: /var/run/docker.sock
+      - .:/app
+    command: npm run dev
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: development
    db:
     image: postgres
     restart: always
@@ -19,7 +20,6 @@ services:
       POSTGRES_PASSWORD: r4nd0mp4ssw0rd
     volumes:
       - ./mydbdata:/var/lib/postgresql/data
-
   adminer:
     image: adminer
     restart: always
