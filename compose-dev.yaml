@@ -9,4 +9,19 @@ services:
     - type: bind
       source: /var/run/docker.sock
       target: /var/run/docker.sock
+   db:
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: r4nd0mp4ssw0rd
+    volumes:
+      - ./mydbdata:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
 
