@@ -1,16 +1,15 @@
 version: '3.8'
 services:
-    web:
-      build:
-        context: ./
-        target: runner
+    app:
+      entrypoint:
+      - sleep
+      - infinity
+      image: docker/dev-environments-javascript:stable-1
+      init: true
       volumes:
-        - .:/app
-      command: npm run dev
-      ports:
-        - "3000:3000"
-      environment:
-        NODE_ENV: development
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock
     db:
       image: postgres
       restart: always
