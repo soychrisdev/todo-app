@@ -10,11 +10,12 @@ import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
 import NavbarItemsMobile from "./navbarItemsMobile/navbarItemsMobile"
 import { Skeleton } from "../ui/skeleton"
 import NavbarUser from "./navbarUser/navbarUser"
+import { useSession } from "next-auth/react"
 
 export default function Navbar() {
+    const { data: session } = useSession()
 
-
-    const userLogged = true;
+    const userLogged = session ? true : false
 
     const handleClick = () => {
         // setCounter(counter++)
@@ -27,7 +28,7 @@ export default function Navbar() {
                     <NavbarLogo />
                     <NavbarItems menuItems={menuItems} />
                     <div className="flex items-center gap-4">
-                        <NavbarUser status={userLogged} />
+                        <NavbarUser status={userLogged} session={session} />
                         <NavbarItemsMobile menuItems={menuItems} />
                     </div>
                 </div>
