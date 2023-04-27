@@ -1,28 +1,28 @@
 version: '3.8'
 services:
-  web:
-    build:
-      context: ./
-      target: runner
-    volumes:
-      - .:/app
-    command: npm run dev
-    ports:
-      - "3000:3000"
-    environment:
-      NODE_ENV: development
-   db:
-    image: postgres
-    restart: always
-    ports:
-      - "5432:5432"
-    environment:
-      POSTGRES_PASSWORD: r4nd0mp4ssw0rd
-    volumes:
-      - ./mydbdata:/var/lib/postgresql/data
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - 8080:8080
+    web:
+      build:
+        context: ./
+        target: runner
+      volumes:
+        - .:/app
+      command: npm run dev
+      ports:
+        - "3000:3000"
+      environment:
+        NODE_ENV: development
+    db:
+      image: postgres
+      restart: always
+      ports:
+        - "5432:5432"
+      environment:
+        POSTGRES_PASSWORD: r4nd0mp4ssw0rd
+      volumes:
+        - ./mydbdata:/var/lib/postgresql/data
+    adminer:
+      image: adminer
+      restart: always
+      ports:
+        - 8080:8080
 
